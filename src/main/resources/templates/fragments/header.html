@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>header fragment</title>
+</head>
+<body>
+<header class="header" th:fragment="header">
+    <div class="header-container">
+        <h1>Bubba Gump</h1>
+        <ul class="summary">
+            <li>
+                <a href="/">L'accueil</a>
+            </li>
+            <li>
+                <a href="/menu">La carte</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <span></span>
+        </div>
+    </div>
+</header>
+</body>
+</html>
