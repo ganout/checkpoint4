@@ -19,75 +19,66 @@
         </ul>
     </div>
     <section class="menu-list-container">
-        <div class="menu-list menu-start-container">
-            <h3 id="start">Entrée</h3>
+        <ul class="menu-list menu-start-container">
+            <h3 id="start">Entrées</h3>
             <hr>
-            <div class="menu-dish-container">
-                <div class="menu-dish-text">
-                    <h4>titre</h4>
-                    <p>Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit.
-                        Asperiores assumenda blanditiis consequatur culpa cupiditate eveniet id ipsum ,
-                        iure molestias natus nesciunt, nostrum numquam,
-                        placeat provident quae repellendus repudiandae tempora ullam!
-                    </p>
-                </div>
-                <div class="menu-dish-rigth">
-                    <div class="menu-dish-img">
-                        <img src="/image/sushi-354628_1920.jpg" alt="dish photo">
+            <li th:each="dish : ${dishListStart}" class="menu-dish-container">
+                <div class="menu-dish-container">
+                    <div class="menu-dish-text">
+                        <h4 th:text="${dish.name}"></h4>
+                        <p th:text="${dish.description}"></p>
                     </div>
-                    <div class="menu-dish-price">
-                        <p>10 €</p>
+                    <div class="menu-dish-rigth">
+                        <div class="menu-dish-img">
+                            <img th:src="${dish.image}" alt="dish photo">
+                        </div>
+                        <div class="menu-dish-price">
+                            <p th:text="|${dish.price} €|"></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="menu-list menu-middle-container">
-            <h3 id="middle">Plat</h3>
+            </li>
+        </ul>
+        <ul class="menu-list menu-middle-container">
+            <h3 id="middle">Plats</h3>
             <hr>
-            <div class="menu-dish-container">
-                <div class="menu-dish-text">
-                    <h4>titre</h4>
-                    <p>Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit.
-                        Asperiores assumenda blanditiis consequatur culpa cupiditate eveniet id ipsum ,
-                        iure molestias natus nesciunt, nostrum numquam,
-                        placeat provident quae repellendus repudiandae tempora ullam!
-                    </p>
-                </div>
-                <div class="menu-dish-rigth">
-                    <div class="menu-dish-img">
-                        <img src="/image/korean-cuisine-1991580_1920.jpg" alt="dish photo">
+            <li th:each="dish : ${dishListMiddle}" class="menu-dish-container">
+                <div class="menu-dish-container">
+                    <div class="menu-dish-text">
+                        <h4 th:text="${dish.name}"></h4>
+                        <p th:text="${dish.description}"></p>
                     </div>
-                    <div class="menu-dish-price">
-                        <p>10 €</p>
+                    <div class="menu-dish-rigth">
+                        <div class="menu-dish-img">
+                            <img th:src="${dish.image}" alt="dish photo">
+                        </div>
+                        <div class="menu-dish-price">
+                            <p th:text="|${dish.price} €|"></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="menu-list menu-end-container">
-            <h3 id="end">Déssert</h3>
+            </li>
+        </ul>
+        <ul class="menu-list menu-end-container">
+            <h3 id="end">Désserts</h3>
             <hr>
-            <div class="menu-dish-container">
-                <div class="menu-dish-text">
-                    <h4>titre</h4>
-                    <p>Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit.
-                        Asperiores assumenda blanditiis consequatur culpa cupiditate eveniet id ipsum ,
-                        iure molestias natus nesciunt, nostrum numquam,
-                        placeat provident quae repellendus repudiandae tempora ullam!
-                    </p>
-                </div>
-                <div class="menu-dish-rigth">
-                    <div class="menu-dish-img">
-                        <img src="/image/broiled-1238582_1920.jpg" alt="dish photo">
+            <li th:each="dish : ${dishListEnd}" class="menu-dish-container">
+                <div class="menu-dish-container">
+                    <div class="menu-dish-text">
+                        <h4 th:text="${dish.name}"></h4>
+                        <p th:text="${dish.description}"></p>
                     </div>
-                    <div class="menu-dish-price">
-                        <p>10 €</p>
+                    <div class="menu-dish-rigth">
+                        <div class="menu-dish-img">
+                            <img th:src="${dish.image}" alt="dish photo">
+                        </div>
+                        <div class="menu-dish-price">
+                            <p th:text="|${dish.price} €|"></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
     </section>
 </main>
 <footer th:replace="fragments/footer.html :: footer"></footer>
