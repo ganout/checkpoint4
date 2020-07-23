@@ -28,6 +28,17 @@ hr {
     color: var(--color-font-pink);
     margin-bottom: 2rem;
 }
+
+::selection{
+    background-color: var(--color-font-pink);
+    color: var(--color-font-white);
+}
+
+/* Firefox */
+::-moz-selection {
+    background-color: var(--color-font-pink);
+    color: var(--color-font-white);
+}
 /*END GENERALITY*/
 /*START HEADER*/
 .header {
