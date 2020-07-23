@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/menu.css" rel="stylesheet" type="text/css">
+    <title>Bubba Gump | La carte</title>
+</head>
+<body>
+<main>
+    <header th:replace="fragments/header.html :: header"></header>
+    <div class="menu-nav-container">
+        <h2>La carte</h2>
+        <ul>
+            <li><a href="#start">Entrée</a></li>
+            <li><a href="#middle">Plat</a></li>
+            <li><a href="#end">Déssert</a></li>
+        </ul>
+    </div>
+    <section class="menu-list-container">
+        <div class="menu-list menu-start-container">
+            <h3 id="start">Entrée</h3>
+            <hr>
+            <div class="menu-dish-container">
+                <div class="menu-dish-text">
+                    <h4>titre</h4>
+                    <p>Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.
+                        Asperiores assumenda blanditiis consequatur culpa cupiditate eveniet id ipsum ,
+                        iure molestias natus nesciunt, nostrum numquam,
+                        placeat provident quae repellendus repudiandae tempora ullam!
+                    </p>
+                </div>
+                <div class="menu-dish-rigth">
+                    <div class="menu-dish-img">
+                        <img src="/image/sushi-354628_1920.jpg" alt="dish photo">
+                    </div>
+                    <div class="menu-dish-price">
+                        <p>10 €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-list menu-middle-container">
+            <h3 id="middle">Plat</h3>
+            <hr>
+            <div class="menu-dish-container">
+                <div class="menu-dish-text">
+                    <h4>titre</h4>
+                    <p>Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.
+                        Asperiores assumenda blanditiis consequatur culpa cupiditate eveniet id ipsum ,
+                        iure molestias natus nesciunt, nostrum numquam,
+                        placeat provident quae repellendus repudiandae tempora ullam!
+                    </p>
+                </div>
+                <div class="menu-dish-rigth">
+                    <div class="menu-dish-img">
+                        <img src="/image/korean-cuisine-1991580_1920.jpg" alt="dish photo">
+                    </div>
+                    <div class="menu-dish-price">
+                        <p>10 €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-list menu-end-container">
+            <h3 id="end">Déssert</h3>
+            <hr>
+            <div class="menu-dish-container">
+                <div class="menu-dish-text">
+                    <h4>titre</h4>
+                    <p>Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.
+                        Asperiores assumenda blanditiis consequatur culpa cupiditate eveniet id ipsum ,
+                        iure molestias natus nesciunt, nostrum numquam,
+                        placeat provident quae repellendus repudiandae tempora ullam!
+                    </p>
+                </div>
+                <div class="menu-dish-rigth">
+                    <div class="menu-dish-img">
+                        <img src="/image/broiled-1238582_1920.jpg" alt="dish photo">
+                    </div>
+                    <div class="menu-dish-price">
+                        <p>10 €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer th:replace="fragments/footer.html :: footer"></footer>
+</body>
+<script src="/js/header.js" type="text/javascript"></script>
+<script src="/js/menu.js" type="text/javascript"></script>
+</html>

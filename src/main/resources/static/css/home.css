@@ -10,7 +10,7 @@
 /*START SECTION HOME-IMG*/
 .home-img {
     height: calc(100vh - var(--height-header));
-    background-image: url("../image/shrimp-min.jpg");
+    background-image: url("../image/shrimp.jpg");
     background-size: cover;
     background-position: 50% 50%;
 }

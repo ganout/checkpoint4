@@ -1,0 +1,151 @@
+@import "style.css";
+
+/*START NAV*/
+.menu-nav-container {
+    display: flex;
+    margin: 3rem auto;
+}
+
+.menu-nav-container h2 {
+    width: 50%;
+    text-align: right;
+    font-size: 3rem;
+}
+
+.menu-nav-container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.menu-nav-container ul li{
+    margin: auto 1rem;
+}
+
+.menu-nav-container ul li a {
+    color: #454545;
+}
+
+/*ANIMATION */
+.menu-nav-container ul li a:hover{
+    color: var(--color-font-pink);
+}
+
+/*END NAV*/
+/*START MENU*/
+.menu-list-container {
+    margin: auto;
+}
+
+.menu-list {
+    width: 80%;
+    margin: 5rem auto;
+}
+
+.menu-list h3 {
+    font-size: 2rem;
+}
+
+.menu-dish-container {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+}
+
+.menu-dish-text {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.menu-dish-text h4 {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    height: 20%;
+    font-size: 1.7rem;
+}
+
+.menu-dish-text p {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    height: 80%;
+}
+
+.menu-dish-rigth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.menu-dish-img {
+    width: 50%;
+    display: flex;
+}
+
+.menu-dish-img img{
+    max-width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.menu-dish-price {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+/*ANIMATION*/
+
+/*END MENU*/
+
+/*MOBILE*/
+@media only screen and (max-width: 768px) {
+
+    /*START NAV*/
+    .menu-nav-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-nav-container h2 {
+        text-align: center;
+        margin: 2rem auto;
+        white-space: nowrap;
+    }
+    /*END NAV*/
+
+    /*START MENU*/
+    .menu-dish-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .menu-dish-rigth {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .menu-dish-text {
+        width: 100%;
+    }
+
+    .menu-dish-text h4 {
+        margin: 1rem 0;
+    }
+
+    .menu-dish-img {
+        width: 50%;
+    }
+
+    .menu-dish-price {
+        width: 50%;
+    }
+    /*END MENU*/
+}
