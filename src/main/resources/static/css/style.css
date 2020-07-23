@@ -19,6 +19,15 @@
 main {
     overflow: hidden;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
+hr {
+    color: var(--color-font-pink);
+    margin-bottom: 2rem;
+}
 /*END GENERALITY*/
 /*START HEADER*/
 .header {
