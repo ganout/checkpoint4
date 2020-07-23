@@ -16,6 +16,9 @@
     text-decoration: none;
 }
 
+main {
+    overflow: hidden;
+}
 /*END GENERALITY*/
 /*START HEADER*/
 .header {
