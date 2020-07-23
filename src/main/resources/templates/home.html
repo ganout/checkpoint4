@@ -1,11 +1,78 @@
 <!doctype html>
 <html lang="fr" xmlns:th="https://www.thymeleaf.org">
 <head>
-    <link th:href="@{/static/css/style.css}" rel="stylesheet" type="text/css">
-    <link th:href="@{/static/css/home.css}" rel="stylesheet" type="text/css">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/home.css" rel="stylesheet" type="text/css">
     <title>Bubba Gump | Accueil</title>
 </head>
 <body>
-c'est bon !
+    <main>
+        <header th:replace="fragments/header.html :: header"></header>
+        <div class="home-img"></div>
+        <div class="restaurant-presentation-container">
+            <div class="restaurant-presentation-text">
+                <h2>Que peut-on manger chez Bubba Gump ?</h2>
+                <p>
+                    Si vous avez vu le film, vous savez forcément que les principaux plats proposés sont à base de crevettes !
+
+                    Aussi, le concept est basé sur la célèbre tirade de Bubba,
+                    l’ami de Forrest : «La crevette c’est le fruit de la mer.
+                    On la fait au barbecue, bouillie, grillée, rôtie, sautée.
+                    T’as la crevette kebab, la crevette créole, le gombo de crevettes,
+                    à la planche, à la vapeur, en sauce, tu fais l’avocat crevettes,
+                    la crevette citron, la crevette à l’ail, la crevette au poivre,
+                    la soupe de crevettes, le ragoût de crevettes, la salade de crevettes,
+                    le cocktail de crevettes, le hamburger de crevettes, le sandwich crevettes.
+                    Ah… C’est à peu près tout.»
+                </p>
+            </div>
+            <div class="restaurant-presentation-img"></div>
+        </div>
+        <div class="restaurant-info-container">
+            <iframe class="restaurant-info-address" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.161652929451!2d-1.5650206359474133!3d47.20768668898807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ec0142ce6d47%3A0x17a787caf746844e!2sQuai%20Fran%C3%A7ois%20Mitterrand%2C%2044200%20Nantes!5e0!3m2!1sfr!2sfr!4v1595452894367!5m2!1sfr!2sfr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="restaurant-info-text">
+               <div class="opening">
+                   <h3>Horaires d'ouverture</h3>
+                   <ul>
+                       <li>
+                           <p>Lundi au Vendredi :</p>
+                           <p class="hour">11h00 - 14H00<br>19H00 - 23H00</p>
+                       </li>
+                       <li>
+                           <p>Samedi :</p>
+                           <p class="hour">11h00 - 14H00<br>18H00 - 00H00</p>
+                       </li>
+                       <li>
+                           <p>Dimanche :</p>
+                           <p class="hour">11h00 - 14H00</p>
+                       </li>
+                       <li>
+                           <p>Télephone :</p>
+                           <p class="hour">02-03-04-05-06</p>
+                       </li>
+                   </ul>
+               </div>
+            </div>
+        </div>
+        <div class="home-thumbnails">
+            <h2>Quelques suggestions</h2>
+            <div id="carousel" class="home-thumbnails-carousel">
+                <div class="dish dish1"></div>
+                <div class="dish dish2"></div>
+                <div class="dish dish3"></div>
+                <div class="dish dish4"></div>
+                <div class="dish dish5"></div>
+                <div class="dish dish6"></div>
+                <div class="dish dish7"></div>
+                <div class="dish dish8"></div>
+            </div>
+            </div>
+        </div>
+    </main>
+    <footer th:replace="fragments/footer.html :: footer"></footer>
 </body>
+<script src="/js/header.js" type="text/javascript"></script>
+<script src="/js/home.js" type="text/javascript"></script>
 </html>
