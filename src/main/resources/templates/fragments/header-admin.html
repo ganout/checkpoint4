@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>header admin fragment</title>
+</head>
+<body>
+<header class="header-admin" th:fragment="header-admin">
+    <div class="header-admin-container">
+        <div class="admin-name">
+            <p>John Doe</p>
+        </div>
+        <ul class="admin-summary">
+            <li>
+                <a href="/admin">Admin</a>
+            </li>
+            <li>
+                <a href="/admin-menu">La carte</a>
+            </li>
+        </ul>
+    </div>
+</header>
+</body>
+</html>

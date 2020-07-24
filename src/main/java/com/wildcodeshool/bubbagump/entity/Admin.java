@@ -3,21 +3,18 @@ package com.wildcodeshool.bubbagump.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "meal_time")
-public class MealTime {
+@Table(name = "admin")
+public class Admin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
+    private String password;
 
-    public MealTime() {
-    }
+    public Admin() {
 
-    public MealTime(Long id, String name) {
-        this.id = id;
-        this.name = name;
     }
 
     public Long getId() {
@@ -34,5 +31,13 @@ public class MealTime {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
