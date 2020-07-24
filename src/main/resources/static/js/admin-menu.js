@@ -16,7 +16,7 @@ $(document).ready(function(){
     sectionDish.innerHTML = newResult.innerHTML;
 });*/
 
-//Start to collect the selected company
+//Start to collect the selected dish
 let dish = document.getElementById("dish-choice");
 let dishSelected = dish.addEventListener('change', function() {
 

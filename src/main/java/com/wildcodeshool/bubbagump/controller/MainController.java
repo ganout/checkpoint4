@@ -25,10 +25,10 @@ public class MainController {
     @GetMapping("/menu")
     public String getMenu(Model model) {
 
-        List<Dish> dishList = new ArrayList<>();
-        List<Dish> dishListStart = new ArrayList<>();
-        List<Dish> dishListMiddle = new ArrayList<>();
-        List<Dish> dishListEnd = new ArrayList<>();
+        List<Dish> dishList;
+        List<Dish> dishListStart;
+        List<Dish> dishListMiddle;
+        List<Dish> dishListEnd;
 
         dishList = dishRepository.findAll();
 
