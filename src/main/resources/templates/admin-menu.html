@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/admin.css" rel="stylesheet" type="text/css">
+    <!-- Compiled and minified CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <title>Bubba Gump | Admin</title>
+</head>
+<body>
+<main>
+    <header th:replace="fragments/header-admin.html :: header-admin"></header>
+    <form action="/admin/menu" enctype="multipart/form-data" class="form-admin-menu col s6" method="post">
+        <input th:name="${_csrf.parameterName}" th:value="${_csrf.token}" type="hidden"/>
+        <div class="row">
+            <fieldset class="col s4 offset-s3 fieldset-gray">
+                <div class="input-field col s12">
+                    <select id="dish-choice">
+                        <option value="new">Ajouter un plat</option>
+                        <option th:each="dish : ${dishList}" th:value="${dish.name}" th:text="${dish.name}"></option>
+                    </select>
+                </div>
+            </fieldset>
+        </div>
+        <div class="row">
+        </div>
+        <section id="templateDish" th:object="${dishSelected}">
+                <div class="input-field col s12">
+                    <div class="col s4">
+                        <select th:field="*{mealTime.id}">
+                            <option value="" disabled selected>Choisissez le moment du repas</option>
+                            <option name="mealTime" th:value="${mealTimeList.get(0).getId()}" th:text="${mealTimeList.get(0).name}"></option>
+                            <option name="mealTime" th:value="${mealTimeList.get(1).getId()}" th:text="${mealTimeList.get(1).name}"></option>
+                            <option name="mealTime" th:value="${mealTimeList.get(2).getId()}" th:text="${mealTimeList.get(2).name}"></option>
+                        </select>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input th:field="*{name}" class="validate" id="dish-name" type="text">
+                    <label class="active" for="dish-name">Nom du plat</label>
+                </div>
+                <div class="input-field col s4 offset-s2">
+                    <input th:field="*{price}" class="validate" id="dish-price" type="text">
+                    <label class="active" for="dish-price">Prix du plat</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s10 offset-s1">
+                    <textarea th:field="*{description}" id="dish-description" class="materialize-textarea"></textarea>
+                    <label class="active" for="dish-description">Description du plat</label>
+                </div>
+            </div>
+            <div class="row">
+                <button class="col s2 offset-s5 btn waves-effect waves-light light-green darken-1"
+                        name="action"
+                        type="submit">Enregistrer</button>
+            </div>
+        </section>
+    </form>
+    <!--JavaScript at end of body for optimized loading-->
+    <script crossorigin="anonymous"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/admin-menu.js" type="text/JavaScript"></script>
+</main>
+</body>
+</html>

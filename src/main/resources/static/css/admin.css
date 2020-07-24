@@ -1,0 +1,59 @@
+@import "style.css";
+
+.header-admin {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #454545;
+}
+
+.header-admin-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.admin-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+}
+
+.admin-name p {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color-font-white);
+}
+
+.admin-summary {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-summary li {
+    margin: 2rem auto;
+    width: 100px;
+}
+
+.admin-summary li a {
+    color: var(--color-font-white);
+    font-size: 1.5rem;
+}
+
+.admin-summary li a:hover {
+    color: var(--color-font-pink);
+}
+
+.form-admin-menu {
+    height: 100vh;
+    padding: 1rem 0 1rem 300px;
+}
+
